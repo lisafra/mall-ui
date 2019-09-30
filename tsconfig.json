@@ -1,12 +1,12 @@
 {
   "compilerOptions": {
-    "target": "es2017",
+    "target": "es6",
     "module": "commonjs",
     "removeComments": false,
     "preserveConstEnums": true,
     "moduleResolution": "node",
     "experimentalDecorators": true,
-    "noImplicitAny": false,
+    "noImplicitAny": true,
     "allowSyntheticDefaultImports": true,
     "outDir": "lib",
     "noUnusedLocals": true,
@@ -26,7 +26,9 @@
   },
   "exclude": [
     "node_modules",
-    "dist"
+    "dist",
+    "lib",
+    "es"
   ],
   "compileOnSave": false
 }

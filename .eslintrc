@@ -1,15 +1,21 @@
 {
   "extends": ["taro"],
-  "rules": {
-    "no-unused-vars": ["error", { "varsIgnorePattern": "Taro" }],
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }]
+  "env": {
+    "jest": true
   },
-    "parser": "@typescript-eslint/parser",
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
     },
     "useJSXTextNode": true,
     "project": "./tsconfig.json"
+  },
+  "rules": {
+    "class-methods-use-this": 0,
+    "prefer-rest-params": 0,
+    "arrow-body-style": "warn",
+    "no-unused-vars": ["error", { "varsIgnorePattern": "Taro" }],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx", ".md"] }]
   }
-  }
+}
