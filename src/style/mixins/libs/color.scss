@@ -1,0 +1,59 @@
+/**
+ * 通过js修改主题色
+ */
+
+@mixin theme-primary-text ($color: $brand-color) {
+  color: $color;
+
+  [data-theme='gold'] & {
+    color: $color-theme-gold;
+  }
+
+  [data-theme='red'] & {
+    color: $color-theme-red;
+  }
+}
+
+// 次主题色文字
+@mixin theme-second-text ($color: $brand-second-color) {
+  color: $color;
+
+  [data-theme='gold'] & {
+    color: $color-theme-black;
+  }
+}
+
+// 主题色背景
+@mixin theme-primary-bg ($color: $brand-color) {
+  background-color: $color;
+
+  [data-theme='gold'] & {
+    background-color: $color-theme-gold;
+  }
+
+  [data-theme='red'] & {
+    background-color: $color-theme-red;
+  }
+}
+
+// 次主题色背景
+@mixin theme-second-bg ($color: $brand-second-color) {
+  background-color: $color;
+
+  [data-theme='gold'] & {
+    background-color: $color-theme-black;
+  }
+}
+
+// 渐变背景
+@mixin color-theme-bg-gradient ($start: $brand-light-color, $end: $brand-color) {
+  background: (linear-gradient(135deg, $start 0%, $end 100%));
+
+  [data-theme='gold'] & {
+    background: (linear-gradient(135deg, $color-theme-light-gold 0%, $color-theme-gold 100%));
+  }
+
+  [data-theme='red'] & {
+    background: (linear-gradient(135deg, $color-theme-light-red 0%, $color-theme-red 100%));
+  }
+}

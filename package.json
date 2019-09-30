@@ -57,6 +57,8 @@
     "lint:style-fix": "stylelint \"src/**/*.scss\" --syntax scss --fix",
     "test": "cross-env NODE_ENV=test && jest --coverage",
     "test:ci": "npm run build:h5 && npm run test",
+    "jest-test": "jest --config jest.config.js",
+    "test:all": "./scripts/test-all.sh",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 1"
   },
   "dependencies": {
@@ -72,6 +74,8 @@
     "nervjs": "^1.4.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^7.0.0",
+    "@commitlint/config-conventional": "^7.0.1",
     "@tarojs/plugin-babel": "1.3.5",
     "@tarojs/plugin-csso": "1.3.5",
     "@tarojs/plugin-sass": "1.3.5",
@@ -81,6 +85,7 @@
     "@types/webpack-env": "^1.13.6",
     "@typescript-eslint/parser": "^1.6.0",
     "babel-eslint": "^8.2.3",
+    "babel-jest": "^23.4.2",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "babel-plugin-transform-jsx-stylesheet": "^0.6.5",
@@ -89,16 +94,21 @@
     "eslint": "^5.16.0",
     "eslint-config-taro": "1.3.5",
     "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jest": "^21.21.0",
     "eslint-plugin-react": "^7.8.2",
     "eslint-plugin-taro": "1.3.5",
-    "prettier": "^1.18.2",
-    "stylelint": "9.3.0",
-    "stylelint-scss": "^3.2.0",
-    "stylelint-config-taro-rn": "1.3.5",
-    "stylelint-taro-rn": "1.3.5",
-    "typescript": "^3.0.1",
+    "glob": "^7.1.1",
     "husky": "^3.0.7",
-    "lint-staged": "^9.4.0"
+    "jest": "^23.5.0",
+    "jest-spec-reporter": "^1.0.3",
+    "lint-staged": "^9.4.0",
+    "prettier": "^1.18.2",
+    "stylelint": "10.1.0",
+    "stylelint-config-standard": "^19.0.0",
+    "stylelint-config-taro-rn": "1.3.5",
+    "stylelint-scss": "^3.2.0",
+    "stylelint-taro-rn": "1.3.5",
+    "typescript": "^3.0.1"
   },
   "husky": {
     "hooks": {

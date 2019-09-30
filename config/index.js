@@ -1,5 +1,5 @@
 const config = {
-  projectName: 'myApp',
+  projectName: 'Alita-UI',
   date: '2019-9-30',
   designWidth: 750,
   deviceRatio: {
