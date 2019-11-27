@@ -1,0 +1,34 @@
+@import '../../style/variables/default.scss';
+@import '../../style/mixins/index.scss';
+
+.au-menu {
+    @include flex-between-center();
+
+    min-height: $menu-height;
+    background: #fff;
+    box-sizing: border-box;
+    padding-right: $padding-main;
+    margin-left: $padding-main;
+    font-size: $font-size-base;
+    color: $color-text-base;
+
+    &.disabled {
+        opacity: $opacity-disabled;
+    }
+
+    &.line {
+        border-bottom: 1px solid $color-border-base;
+    }
+
+    &__title {
+        font-size: $menu-title-font-size;
+        @include flex-center();
+    }
+
+    &__value {
+        @include flex-center();
+
+        font-size: $menu-value-font-size;
+        color: $color-text-desc;
+    }
+}

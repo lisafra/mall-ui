@@ -1,0 +1,206 @@
+/* do not import this file except components/style/index.less */
+%effect {
+  animation-duration: 0.2s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
+}
+
+.au {
+  /* fade */
+  &-fade-enter,
+  &-fade-appear {
+    opacity: 0;
+    @extend %effect;
+
+    animation-play-state: paused;
+  }
+
+  &-fade-leave {
+    @extend %effect;
+
+    animation-play-state: paused;
+  }
+
+  &-fade-enter-active,
+  &-fade-appear-active {
+    animation-name: auFadeIn;
+    animation-play-state: running;
+  }
+
+  &-fade-leave-active {
+    animation-name: auFadeOut;
+    animation-play-state: running;
+  }
+
+  @keyframes auFadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes auFadeOut {
+    0% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+  /* slide */
+
+  &-slide-up-enter,
+  &-slide-up-appear {
+    transform: translate(0, 100%);
+  }
+
+  &-slide-up-enter,
+  &-slide-up-appear,
+  &-slide-up-leave {
+    @extend %effect;
+
+    animation-play-state: paused;
+  }
+
+  &-slide-up-enter-active,
+  &-slide-up-appear-active {
+    animation-name: auSlideUpIn;
+    animation-play-state: running;
+  }
+
+  &-slide-up-leave-active {
+    animation-name: auSlideUpOut;
+    animation-play-state: running;
+  }
+
+  @keyframes auSlideUpIn {
+    0% {
+      transform: translate(0, 100%);
+    }
+
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+
+  @keyframes auSlideUpOut {
+    0% {
+      transform: translate(0, 0);
+    }
+
+    100% {
+      transform: translate(0, 100%);
+    }
+  }
+
+  /* zoom */
+  &-zoom-enter,
+  &-zoom-leave {
+    display: block;
+  }
+
+  &-zoom-enter,
+  &-zoom-appear {
+    opacity: 0;
+    @extend %effect;
+
+    animation-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    animation-play-state: paused;
+  }
+
+  &-zoom-leave {
+    @extend %effect;
+
+    animation-timing-function: cubic-bezier(0.6, -0.3, 0.74, 0.05);
+    animation-play-state: paused;
+  }
+
+  &-zoom-enter-active,
+  &-zoom-appear-active {
+    animation-name: auZoomIn;
+    animation-play-state: running;
+  }
+
+  &-zoom-leave-active {
+    animation-name: auZoomOut;
+    animation-play-state: running;
+  }
+
+  @keyframes auZoomIn {
+    0% {
+      opacity: 0;
+      transform-origin: 50% 50%;
+      transform: scale(0, 0);
+    }
+
+    100% {
+      opacity: 1;
+      transform-origin: 50% 50%;
+      transform: scale(1, 1);
+    }
+  }
+
+  @keyframes auZoomOut {
+    0% {
+      opacity: 1;
+      transform-origin: 50% 50%;
+      transform: scale(1, 1);
+    }
+
+    100% {
+      opacity: 0;
+      transform-origin: 50% 50%;
+      transform: scale(0, 0);
+    }
+  }
+
+  /* slide down */
+  &-slide-down-enter,
+  &-slide-down-appear {
+    transform: translate(0, -100%);
+  }
+
+  &-slide-down-enter,
+  &-slide-down-appear,
+  &-slide-down-leave {
+    @extend %effect;
+
+    animation-play-state: paused;
+  }
+
+  &-slide-down-enter-active,
+  &-slide-down-appear-active {
+    animation-name: auSlideDownIn;
+    animation-play-state: running;
+  }
+
+  &-slide-down-leave-active {
+    animation-name: auSlideDownOut;
+    animation-play-state: running;
+  }
+
+  @keyframes auSlideDownIn {
+    0% {
+      transform: translate(0, -100%);
+    }
+
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+
+  @keyframes auSlideDownOut {
+    0% {
+      transform: translate(0, 0);
+    }
+
+    100% {
+      transform: translate(0, -100%);
+    }
+  }
+}

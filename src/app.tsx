@@ -1,7 +1,10 @@
 import Taro, { Component, Config } from '@tarojs/taro'
 import Index from './pages/index'
 
+import './style/themes/orange.scss'
+import './style/index.scss'
 import './app.scss'
+import 'taro-ui/dist/style/index.scss' 
 
 // 如果需要在 h5 环境中开启 React Devtools
 // 取消以下注释：
@@ -20,12 +23,15 @@ class App extends Component {
    */
   config: Config = {
     pages: [
-      'pages/index/index'
+      'pages/index/index',
+      'pages/button/index',
+      'pages/menu/index',
+      'pages/tab/index'
     ],
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',
-      navigationBarTitleText: 'WeChat',
+      navigationBarTitleText: 'Alita UI',
       navigationBarTextStyle: 'black'
     }
   }

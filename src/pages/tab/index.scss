@@ -1,0 +1,9 @@
+
+@import '../../style/index.scss';
+@import '../../style/mixins/libs/flex.scss';
+
+.tab-content {
+    min-height: 300px;
+    background: $fill-grey;
+    @include flex-center();
+}

@@ -1,0 +1,127 @@
+
+@import '../themes/blue.scss';
+
+// img base url
+$imgBaseUrl: 'https://storage.jd.com/shopmall-miniapp/';
+
+$hd: 2px;
+
+/* Font */
+$font-size-xs: 10 * $hd;
+$font-size-sm: 12 * $hd;
+$font-size-base: 14 * $hd;
+$font-size-subhead: 15 * $hd;
+$font-size-caption: 16 * $hd;
+$font-size-head: 18 * $hd;
+$font-size-bighead: 20 * $hd;
+
+/* Line Height */
+$line-height-base: 1 !default; // 单行
+$line-height-paragraph: 1.5;    // 多行行高
+
+/* Opacity */
+$opacity: 0.6 !default; // Button 等组件点击态额透明度
+$opacity-disabled: 0.3 !default; // Button 等组件禁用态的透明度
+
+/* Border Radius */
+$radius-xs: 2 * $hd;
+$radius-sm: 4 * $hd;
+$radius-md: 8 * $hd;
+$radius-lg: 12 * $hd;
+$radius-circle: 50%;
+
+/* Shadow */
+$shadow-box: 0 0 40px 0 rgba(0, 0, 0, 0.06);
+$shadow-btn:  0 6px 10px -2px rgba(0, 0, 0, 0.2),
+0 12px 20px 0 rgba(0, 0, 0, 0.14),
+0 2px 36px 0 rgba(0, 0, 0, 0.12) !default;
+
+/* 边框尺寸 */
+$border-width-sm: 1px;
+$border-width-md: 2 * $hd;
+$border-width-lg: 4 * $hd;
+
+/* 水平间距 */
+$h-spacing-sm: 5 * $hd;
+$h-spacing-md: 8 * $hd;
+$h-spacing-lg: 12 * $hd;
+$h-spacing-xlg: 16 * $hd;
+$padding-main: $h-spacing-lg;
+
+/* 垂直间距 */
+$v-spacing-xs: 3 * $hd;
+$v-spacing-sm: 6 * $hd;
+$v-spacing-md: 9 * $hd;
+$v-spacing-lg: 15 * $hd;
+$v-spacing-xl: 21 * $hd;
+
+/* 图标尺寸 */
+$icon-size-xxs: 15 * $hd;
+$icon-size-xs: 18 * $hd;
+$icon-size-sm: 20 * $hd;
+$icon-size-md: 22 * $hd;       // 导航条上的图标、grid的图标大小
+$icon-size-lg: 36 * $hd;
+
+/* 动画缓动 */
+$ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1) !default;
+$timing-func: cubic-bezier(0.36, 0.66, 0.04, 1) !default;
+
+/* z-index */
+$zindex-divider: 100 !default;
+$zindex-steps: 500 !default;
+$zindex-tab: 600 !default;
+$zindex-form: 700 !default;
+$zindex-nav: 800 !default;
+$zindex-search-bar: 800 !default;
+$zindex-indexes: 805 !default;
+$zindex-flot-layout: 810 !default;
+$zindex-drawer: 900 !default;
+$zindex-modal: 1000 !default;
+$zindex-action-sheet: 1010 !default;
+$zindex-picker: 1010 !default;
+$zindex-curtain: 1080 !default;
+$zindex-message: 1090 !default;
+$zindex-toast: 1090 !default;
+
+/**
+* ---------------------------------
+* 组件变量
+**/
+
+/* button */
+$button-width-lg: 160 * $hd;
+$button-height-lg: 56 * $hd;
+
+$button-width-select: 106 * $hd;
+$button-height-select: 36 * $hd;
+$button-font-size-select: $font-size-base;
+
+$button-height: 50 * $hd;
+
+$button-width-sm: 53 * $hd;
+$button-height-sm: 24 * $hd;
+
+$button-font-size: $font-size-caption;
+$button-font-size-sm: $font-size-sm;
+
+/* loading */
+$loading-size: 36px !default;
+$loading-color: $color-brand;
+
+/* menu */
+$menu-title-font-size: $font-size-caption;
+$menu-value-font-size: $font-size-sm;
+$menu-height: 58 * $hd;
+
+/* tabs */
+$tabs-height: 43.5 * $hd;
+$tabs-font-size-heading: 15 * $hd;
+$tabs-ink-bar-height: 2 * $hd;
+$tabs-padding-bottom: 50 * $hd;
+
+/* tab-bar */
+$tab-bar-height: 50 * $hd;
+
+/* tag */
+$tag-height: 25 * $hd;
+$tag-height-sm: 15 * $hd;

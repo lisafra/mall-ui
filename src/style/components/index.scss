@@ -1,5 +1,10 @@
-/**
- * Components
- */
 
-@import "./button.scss";
+@import '../variables/default.scss';
+
+@import './flex.scss';
+
+@import './button.scss';
+
+@import './loading.scss';
+
+@import './menu.scss';

@@ -1,12 +1,18 @@
 /**
- * Taro UI - Default variables
+ * Alita UI - Default variables
  */
 
-/* Variables */
-@import './themes/index.scss';
+// @import './themes/gold.scss';
+
+// @import './themes/orange.scss';
+
+@import './variables/default.scss';
 
 /* Mixin */
 @import './mixins/index.scss';
+
+/* Animation */
+@import './animation.scss';
 
 /* Components */
 @import './components/index.scss';

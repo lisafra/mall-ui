@@ -1,0 +1,71 @@
+@import './style/index.scss';
+
+.g-page {
+    box-sizing: border-box;
+    min-height: 100vh;
+    background: $fill-grey;
+
+    &__title {
+        display: flex;
+        align-items: center;
+        height: 16vh;
+        opacity: 0.8;
+        padding-left: 72px;
+        line-height: 80px;
+        color: $color-text-base;
+        font-size: $font-size-head;
+        font-weight: bold;
+
+        .text {
+            margin-right: 12px;
+            color: $color-brand;
+            font-size: $font-size-bighead;
+        }
+    }
+
+    &__logo {
+        background: #fff;
+        @include flex-center();
+
+        justify-content: flex-start;
+        font-weight: bold;
+        padding: 20px 0;
+    }
+
+    &__sub-title {
+        position: relative;
+        margin-bottom: 50px;
+        padding-left: 50px;
+        color: $color-text-base;
+        font-size: $font-size-subhead;
+        font-weight: bold;
+        line-height: 1.5;
+        opacity: 0.8;
+
+        &.top60 {
+            margin-top: 60px;
+        }
+
+        &::before {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            left: 24px;
+            top: 50%;
+            margin-top: -20px;
+            width: 2PX;
+            height: 40px;
+            background-color: $color-brand;
+            box-shadow: 0 7px 12px 0 rgba(97, 144, 232, 0.2);
+            border-radius: 1PX;
+        }
+    }
+
+    &__content {
+        background: #fff;
+        padding: 30px 0;
+        min-height: 84vh;
+        box-sizing: border-box;
+        box-shadow: $shadow-box;
+    }
+}

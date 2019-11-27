@@ -1,0 +1,19 @@
+@import '../../style/variables/default.scss';
+@import '../../style/mixins/index.scss';
+
+.au-img {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+
+    &__placeholder {
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    &__inner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

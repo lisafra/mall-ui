@@ -1,0 +1,62 @@
+@import '../../style/variables/default.scss';
+@import '../../style/mixins/index.scss';
+
+.au-icon {
+   width: $icon-size-md;
+   height: $icon-size-md;
+   display: inline-block;
+   position: relative;
+
+   &.arrow {
+       width: 25px;
+       height: 25px;
+   }
+
+   &.arrow-right {
+       transform: scale(0.75);
+
+       &.large {
+           transform: scale(1);
+        }
+
+        &::before {
+            @include arrow();
+        }
+    }
+
+    &.arrow-left {
+        transform: scale(0.75);
+
+        &.large {
+            transform: scale(1);
+        }
+
+        &::before {
+            @include arrow(left);
+        }
+    }
+
+    &.arrow-down {
+        transform: scale(0.75);
+
+        &.large {
+          transform: scale(1);
+        }
+
+        &::before {
+          @include arrow(down);
+        }
+    }
+
+    &.arrow-up {
+        transform: scale(0.75);
+
+        &.large {
+          transform: scale(1);
+        }
+
+        &::before {
+          @include arrow(up);
+        }
+    }
+}

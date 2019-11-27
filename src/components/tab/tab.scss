@@ -1,0 +1,182 @@
+@import '../../style/variables/default.scss';
+@import '../../style/mixins/index.scss';
+
+$component:'.au-tab';
+$tabs-pane-min-height: 100px;
+
+#{$component} {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding-bottom: $tabs-padding-bottom;
+
+  /* elements */
+  &__item {
+    position: relative;
+    flex: 1;
+    padding: $v-spacing-md $h-spacing-lg;
+    color: $color-text-base;
+    font-size: $font-size-caption;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-align: center;
+    z-index: 1;
+
+    &-underline {
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: $tabs-ink-bar-height;
+      border-radius: $tabs-pane-min-height;
+      background-color: $color-brand;
+      transform: scaleX(0);
+      transition: all 0.15s;
+    }
+
+    &--active {
+      color: $color-brand;
+
+      #{$component}__item-underline {
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  &__header {
+    position: relative;
+    display: flex;
+    width: 100%;
+    white-space: nowrap;
+    background-color: #fff;
+    box-sizing: border-box;
+    overflow: -moz-scrollbars-none;
+    z-index: 1;
+
+    &::-webkit-scrollbar {
+      display: none;
+      width: 0 !important;
+      height: 0 !important;
+      background: transparent;
+    }
+  }
+
+  &__body {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    transition: all 0.3s;
+    will-change: transform, left, top;
+    overflow: visible;
+  }
+
+  &__underline {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: auto;
+    right: auto;
+    width: 600%;
+    height: $tabs-ink-bar-height;
+    border-radius: $tabs-pane-min-height;
+    background-color: #fff;
+  }
+
+  /* modifiers */
+  &__scroll {
+    #{$component}__header {
+      overflow-x: scroll;
+      -webkit-overflow-scrolling: touch;
+      white-space: nowrap;
+    }
+
+    #{$component}__item {
+      display: inline-block;
+      overflow: visible;
+    }
+  }
+
+  &--vertical {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+
+    #{$component}__body {
+      display: inline-block;
+      flex: 1;
+      height: $tabs-pane-min-height;
+      width: auto;
+    }
+
+    #{$component}__underline {
+      top: 0;
+      left: 0;
+      bottom: auto;
+      width: 1px;
+      height: 100%;
+    }
+
+    #{$component}__header {
+      display: inline-block;
+      width: auto;
+    }
+
+    #{$component}__item {
+      display: flex;
+      justify-content: center;
+      width: auto;
+      align-items: center;
+
+      &-underline {
+        display: block;
+        top: 0;
+        right: 0;
+        bottom: auto;
+        left: auto;
+        width: 1px;
+        height: 100%;
+        transform: scaleY(0);
+      }
+
+      &--active {
+        #{$component}__item-underline {
+          transform: scaleY(1);
+        }
+      }
+    }
+  }
+}
+
+/* hack SWAN */
+
+#{$component}--scroll#{$component}--horizontal#{$component}--SWAN {
+  #{$component}__item-underline {
+    bottom: 1px;
+  }
+}
+
+/* hack SWAN */
+
+#{$component}__item-content {
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+  white-space: initial;
+  vertical-align: top;
+  height: 0;
+  overflow: hidden;
+  margin-top: -2px;
+
+  /* modifiers */
+  &--active {
+    height: auto;
+  }
+
+  &--vertical {
+    display: block;
+    height: 100%;
+    overflow: scroll;
+  }
+}

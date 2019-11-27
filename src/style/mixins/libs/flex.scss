@@ -48,3 +48,21 @@
 @mixin align-self($value: auto) {
   align-self: $value;
 }
+
+@mixin flex-center {
+  @include display-flex();
+  @include align-items(center);
+  @include justify-content(center);
+}
+
+@mixin flex-between-center {
+  @include display-flex();
+  @include align-items(center);
+  @include justify-content(space-between);
+}
+
+@mixin flex-around-center {
+  @include display-flex();
+  @include align-items(center);
+  @include justify-content(space-around);
+}

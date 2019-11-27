@@ -1,0 +1,54 @@
+@import '../mixins/index.scss';
+
+/* 全局/品牌色 */
+$color-brand: #FF7A64 !default;
+$color-brand-light: tint(#FF7A64, 10%) !default;
+$color-brand-dark: shade(#FF7A64, 60%) !default;
+$color-brand-second: #f6336d !default;
+$color-active: tint($color-brand, 40%);
+
+/* 辅助色 */
+$color-success: #0C8 !default;
+$color-error: #F53 !default;
+$color-warning: #FFD400 !default;
+$color-info: #FF7A64 !default;
+$color-disabled: #bbb !default;              // 失效
+
+/* 文字色 */
+$color-text-base: #333 !default;                  // 基本
+$color-text-base-inverse: #fff !default;          // 基本 - 反色
+$color-text-base-darken: #232323 !default;   // 突出文字颜色 - title
+$color-text-sub: #666 !default;          // 次文字颜色
+$color-text-caption: #888 !default;               // 辅助描述
+$color-text-desc: #999 !default;          // 辅助文字字颜色
+$color-text-primary: $color-brand;
+$color-text-number: $color-brand-second;
+
+/* 背景色 */
+$fill-base: #fff !default;                           // 组件默认背景
+$fill-body: #f5f5f9 !default;                        // 页面背景
+$fill-tap: #ddd !default;                            // 组件默认背景 - 按下
+$fill-disabled: #ddd !default;                       // 通用失效背景
+$fill-mask: rgba(0, 0, 0, 0.4) !default;              // 遮罩背景
+$fill-icon-base: #ccc !default;                      // 许多小图标的背景，比如一些小圆点，加减号
+$fill-grey: #f7f7f7 !default;
+$fill-gradient: linear-gradient(135deg, $color-brand-light 0%, $color-brand 100%) !default;
+
+/* 边线 */
+$color-border-base: #ddd !default;
+$color-border-light: #F2F2F2 !default;
+$color-divide: #f0f0f0 !default;
+
+/* 组件样式: Link */
+$color-link: $color-brand !default;
+$color-link-hover: $color-brand-light !default;
+$color-link-active: $color-brand-dark !default;
+$color-link-disabled: $color-disabled !default;
+
+/* 组件样式: button */
+$color-button-primary: $color-brand;
+$color-button: $color-brand-second;
+
+$color-button-gray: $fill-grey;
+$color-button-gray-active: $color-active;
+$color-button-gray-text-active: $color-brand;
